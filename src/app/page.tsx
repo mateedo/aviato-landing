@@ -15,13 +15,14 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
 
-  const handleDemoButtonClicked = (e: any) => {
-    setShowModal(true);
-    e.stopPropagation();
+  // Use React.MouseEvent<HTMLButtonElement> if the trigger is specifically from a button
+  const handleDemoButtonClicked = (e: React.MouseEvent<HTMLElement>) => {
+    e.stopPropagation(); // Prevents the click from bubbling up
+    setShowModal(true); // Shows the modal
   };
 
   const handleOutsideModalClicked = () => {
-    setShowModal(false);
+    setShowModal(false); // Closes the modal
   };
 
   const mainContentStyle = showModal ? "blur-sm absolute" : "";
@@ -32,24 +33,13 @@ export default function Home() {
         <div className="bg-gray-50">
           <Navbar onDemoButtonClicked={handleDemoButtonClicked} />
           <LandingView onDemoButtonClicked={handleDemoButtonClicked} />
-
-          <ClientsView/>
+          <ClientsView />
         </div>
-
-      <CompanyExplanationView onDemoButtonClicked={handleDemoButtonClicked} />
-
-
-      <ApiView onDemoButtonClicked={handleDemoButtonClicked} />
-
-
-
-      <FeaturesView/>
-
-      
-      <DemoPromptView onDemoButtonClicked={handleDemoButtonClicked} />
-      <Footer/>
-
-        
+        <CompanyExplanationView onDemoButtonClicked={handleDemoButtonClicked} />
+        <ApiView onDemoButtonClicked={handleDemoButtonClicked} />
+        <FeaturesView />
+        <DemoPromptView onDemoButtonClicked={handleDemoButtonClicked} />
+        <Footer />
       </div>
       {showModal && <DemoModal />}
     </div>

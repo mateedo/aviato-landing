@@ -5,7 +5,7 @@ import SS2 from "../../public/screenshot-2.png";
 import SS3 from "../../public/screenshot-3.png";
 
 type CompanyExplanationViewProps = {
-  onDemoButtonClicked: (e: unknown) => void;
+  onDemoButtonClicked: (e: React.MouseEvent<HTMLElement>) => void;
 };
 
 const images = [SS1, SS2, SS3];

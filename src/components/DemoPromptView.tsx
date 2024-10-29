@@ -1,5 +1,5 @@
 type DemoPromptViewProps = {
-  onDemoButtonClicked: (e: unknown) => void;
+  onDemoButtonClicked: (e: React.MouseEvent<HTMLElement>) => void;
 };
 
 import aviatoLogo from "../../public/logo.jpg"
@@ -13,7 +13,7 @@ const DemoPromptView: React.FC<DemoPromptViewProps> = ({ onDemoButtonClicked }) 
       </div>
 
       <h1 className="text-6xl md:text-7xl font-bold text-center mb-4 mx-auto max-w-4xl text-black">
-        Get the clearest picture of what's next in private markets
+        Get the clearest picture of whats next in private markets
       </h1>
 
       <button

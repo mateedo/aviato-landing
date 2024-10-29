@@ -5,7 +5,7 @@ import Img3 from "../../public/api-cta-3.png";
 import Img4 from "../../public/api-cta-4.png";
 
 type ApiViewProps = {
-  onDemoButtonClicked: (e: unknown) => void;
+  onDemoButtonClicked: (e: React.MouseEvent<HTMLElement>) => void;
 };
 
 const ApiView: React.FC<ApiViewProps> = ({ onDemoButtonClicked }) => {
