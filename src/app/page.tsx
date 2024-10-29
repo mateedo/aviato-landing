@@ -33,7 +33,10 @@ export default function Home() {
         <LandingView onDemoButtonClicked={handleDemoButtonClicked} />
 
         <ClientsView/>
+
         <CompanyExplanationView onDemoButtonClicked={handleDemoButtonClicked} />
+
+        
         <ApiView onDemoButtonClicked={handleDemoButtonClicked} />
         <FeaturesView/>
         <DemoPromptView onDemoButtonClicked={handleDemoButtonClicked} />
