@@ -27,10 +27,11 @@ export default function Home() {
   const mainContentStyle = showModal ? "blur-sm absolute" : "";
 
   return (
-    <div className="font-[family-name:var(--font-geist-sans)]">
+    <div className="font-[family-name:var(--font-geist-sans)] min-h-screen bg-gray-50">
       <div onClick={handleOutsideModalClicked} className={mainContentStyle}>
         <Navbar onDemoButtonClicked={handleDemoButtonClicked} />
         <LandingView onDemoButtonClicked={handleDemoButtonClicked} />
+
         <ClientsView/>
         <CompanyExplanationView onDemoButtonClicked={handleDemoButtonClicked} />
         <ApiView onDemoButtonClicked={handleDemoButtonClicked} />
