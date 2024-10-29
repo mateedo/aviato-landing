@@ -27,20 +27,29 @@ export default function Home() {
   const mainContentStyle = showModal ? "blur-sm absolute" : "";
 
   return (
-    <div className="font-[family-name:var(--font-geist-sans)] min-h-screen bg-gray-50">
+    <div className="font-[family-name:var(--font-geist-sans)] min-h-screen bg-white">
       <div onClick={handleOutsideModalClicked} className={mainContentStyle}>
-        <Navbar onDemoButtonClicked={handleDemoButtonClicked} />
-        <LandingView onDemoButtonClicked={handleDemoButtonClicked} />
+        <div className="bg-gray-50">
+          <Navbar onDemoButtonClicked={handleDemoButtonClicked} />
+          <LandingView onDemoButtonClicked={handleDemoButtonClicked} />
 
-        <ClientsView/>
+          <ClientsView/>
+        </div>
 
-        <CompanyExplanationView onDemoButtonClicked={handleDemoButtonClicked} />
+      <CompanyExplanationView onDemoButtonClicked={handleDemoButtonClicked} />
+
+
+      <ApiView onDemoButtonClicked={handleDemoButtonClicked} />
+
+
+
+      <FeaturesView/>
+
+      
+      <DemoPromptView onDemoButtonClicked={handleDemoButtonClicked} />
+      <Footer/>
 
         
-        <ApiView onDemoButtonClicked={handleDemoButtonClicked} />
-        <FeaturesView/>
-        <DemoPromptView onDemoButtonClicked={handleDemoButtonClicked} />
-        <Footer/>
       </div>
       {showModal && <DemoModal />}
     </div>
