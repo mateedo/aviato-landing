@@ -1,5 +1,5 @@
 type DemoPromptViewProps = {
-  onDemoButtonClicked: (e: any) => void;
+  onDemoButtonClicked: (e: unknown) => void;
 };
 
 import aviatoLogo from "../../public/logo.jpg"

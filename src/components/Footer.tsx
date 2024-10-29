@@ -1,4 +1,4 @@
-const Footer: React.FC<{}> = () => {
+const Footer: React.FC<unknown> = () => {
   return (
     <div className="p-8 bg-green-900 text-white grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
       <div>

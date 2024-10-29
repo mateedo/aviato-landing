@@ -1,4 +1,4 @@
-const Logo: React.FC<{}> = () => {
+const Logo: React.FC<unknown> = () => {
   return (
     <div>
       <svg className="*:fill-white h-5" viewBox="0 0 107 20" fill="none" xmlns="http://www.w3.org/2000/svg">

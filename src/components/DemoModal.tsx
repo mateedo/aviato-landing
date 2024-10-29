@@ -1,4 +1,4 @@
-const DemoModal: React.FC<{}> = () => {
+const DemoModal: React.FC<unknown> = () => {
   return (
     <div className="p-16 absolute z-10 justify-center items-center bg-slate-200">
       <h1>How do you intend to use Aviato?</h1>
